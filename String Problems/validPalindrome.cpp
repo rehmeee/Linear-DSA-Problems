@@ -1,20 +1,42 @@
-#include<iostream>
-#include<stdio.h>
-#include<string>
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <algorithm>
 using namespace std;
-int main(){
+int main()
+{
     // https://leetcode.com/problems/valid-palindrome/
-        string str = "asdfsdsa";
-        int j = str.length()-1;
-        int i = 0;
-        for(i;i<=j;i++,j--){
-            if(str[i]==str[j]){
-                continue;
-            }
-            cout<<"not palindrome";
+    string str = "asdfdsa";
+    int len = str.length();
+    transform(str.begin(), str.end(), str.begin(), [](unsigned char c)
+              {
+                 
+                      return tolower(c);
+             
+              });
+    cout << str;
+    int i = 0, j = len - 1;
+    while (i<=j)
+    {
+        if(!isalnum(str[i])){
+            i++;
+            continue;
         }
-        cout<<"planidrome";
-        return 0;
+        else if(!isalnum(str[j])){
+            j--;
+            continue;
+        }
+        else if(str[i] != str[j]){
+    cout<<"string is not palindrom";
+            return false;
+        }
+        else{
+            i++;
+            j--;
+            continue;
+        }
+    }
+    cout << str;
 
-
+   
 }

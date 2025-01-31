@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
             vector<int> nums = {9};
-            int len = nums.size();
+            int len = nums.size(); 
             int i = len-1;
             while (i>=0)
             {

@@ -8,7 +8,6 @@ int main(){
     // https://leetcode.com/problems/majority-element
        
      vector<int> nums = {8,8,7,7,7};
-
      int s = nums.size()/2;
      int actualsize = nums.size();
      int  i = 0;

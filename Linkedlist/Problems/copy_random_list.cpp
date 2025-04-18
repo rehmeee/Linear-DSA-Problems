@@ -5,6 +5,7 @@
 #include<unordered_set>
 #include<unordered_map>
 using namespace std;
+// copy random list
 class Node{
     public: 
     int val;

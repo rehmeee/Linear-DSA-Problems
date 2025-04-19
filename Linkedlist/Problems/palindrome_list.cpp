@@ -5,6 +5,7 @@
 #include<vector>
 #include<stack>
 using namespace std;
+//palindrome list
     class ListNode{
         public:
             int val;

@@ -7,7 +7,7 @@
 using namespace std;
 int threeSumClosest(vector<int>& nums, int target) {
     sort(nums.begin(), nums.end());
-        int closest_sum = INT_MAX / 2;  // A large value but not overflow
+        int closest_sum = INT_MAX / 2; 
         
         for (int i = 0; i < nums.size() - 2; ++i) {
             int left = i + 1, right = nums.size() - 1;

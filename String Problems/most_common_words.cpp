@@ -7,6 +7,7 @@
 #include<unordered_map>
 using namespace std;
 // 819. Most Common Word
+//  i took a simple approach to solve this 
 string mostCommonWord(string paragraph, vector<string>& banned) {
         unordered_map<string, int> map;
         unordered_set<string> set;

@@ -3,24 +3,22 @@
 #include<string>
 #include<algorithm>
 #include<vector>
-#include<set>
+#include<unordered_set>
 using namespace std;
 int thirdMax(vector<int>& nums) {
-        int fm = INT_MIN,  sm = INT_MIN, n = nums.size();
-        long tm = LONG_MIN;
-        for(int  i = 0 ; i< n; ++i){
-            int temp = nums[i];
-            if(temp> fm){
-                fm = temp;
-            }
-            if(temp > sm && temp <= fm){
-                sm = temp;
-            }
-            if(temp > tm && temp <= sm){
-                tm = temp;
-            }
-        }
-        return  tm>= INT_MIN ? tm: fm;
+    unordered_set<int> set;
+
+       for(auto x: nums){
+        set.insert(x);
+       }
+       nums={};
+       for(auto x: set){
+        nums.push_back(x);
+       }
+       sort(nums.begin(), nums.end());
+       if(nums.size()< 3) return nums[nums.size()-1];
+       else return nums[nums.size()-3];
+       return 0;
     }
 int main(){
         	vector<int> vec = {1,2,2,5,3,5};

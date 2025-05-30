@@ -5,6 +5,7 @@
 #include<vector>
 #include<set>
 using namespace std;
+// just try to focus on the things i dont like 
 int countCoveredBuildings(int n, vector<vector<int>>& buildings) {
         int r = n, c = n;
         vector<vector<int>> vec(r, vector<int>(c, 0));

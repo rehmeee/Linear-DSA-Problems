@@ -12,7 +12,7 @@ int main(){
             int j = s-1 ;
             while (j>i)
             {
-                if(vec[j]>vec[j-1]) swap(vec[j], vec[j-1]);
+                if(vec[j]<vec[j-1]) swap(vec[j], vec[j-1]);
                 --j;
             }
             
